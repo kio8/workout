@@ -51,7 +51,7 @@ const HomeScreen = () => {
                 style={{
                   fontWeight: 'bold',
                   fontSize: 20,
-                  color: '#E0F5FE',
+                  color: 'red',
                 }}>
                 Traning Plan
               </Text>
