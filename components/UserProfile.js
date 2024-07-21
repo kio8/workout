@@ -14,7 +14,7 @@ const UserProfile = ({image, email, name}) => {
         </View>
 
         <View style={{justifyContent: 'center'}}>
-          <Text style={{fontWeight: 'bold'}}>{name}</Text>
+          <Text style={{fontWeight: 'bold', color: 'white'}}>{name}</Text>
           <Text style={styles.profile_email}>{email}</Text>
         </View>
       </View>
@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
   },
   profile_email: {
     textDecorationLine: 'underline',
+    color: 'white',
   },
 });
 export default UserProfile;

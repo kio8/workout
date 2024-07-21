@@ -7,17 +7,20 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-const handlePress = () => {
-  {
-    console.log('tap');
-  }
-};
-const handlePressS = () => {
-  {
-    console.log('tapS');
-  }
-};
-const Welcomescreen = () => {
+
+const Welcomescreen = ({navigation}) => {
+  const handlePress = () => {
+    {
+      navigation.navigate('LoginScreen');
+      console.log('tap');
+    }
+  };
+  const handlePressS = () => {
+    {
+      navigation.navigate('SignUpScreen');
+      console.log('tapS');
+    }
+  };
   return (
     <ImageBackground
       style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}

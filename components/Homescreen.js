@@ -15,10 +15,15 @@ import UserProfile from './UserProfile';
 
 var {width, height} = Dimensions.get('window');
 
+const handpress = () => {
+  {
+    console.log('tapS');
+  }
+};
 const HomeScreen = () => {
   return (
     <SafeAreaView style={{top: 30, flex: 1}}>
-      <View
+      {/* <View
         style={{
           marginBottom: 10,
           justifyContent: 'flex-start',
@@ -31,11 +36,11 @@ const HomeScreen = () => {
           email="mo@gmail.com"
           image={require('../assests/mo.jpeg')}
         />
-        {/* <Text style={{fontWeight: 'bold', fontSize: 25}}> Store</Text> */}
-      </View>
+        <Text style={{fontWeight: 'bold', fontSize: 25}}> Store</Text>
+      </View> */}
       <View style={{flex: 0.85, margin: 10, gap: 10, alignItems: 'center'}}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handpress}>
             <ImageBackground
               source={require('../assests/welcome.jpg')}
               resizeMode={'cover'}
