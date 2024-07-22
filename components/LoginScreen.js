@@ -1,18 +1,27 @@
 import React, {Component, useState} from 'react';
-import {Text, StyleSheet, View, TextInput, Button} from 'react-native';
+import {Text, StyleSheet, View, TextInput, Button, Alert} from 'react-native';
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
   const [Username, setUsername] = useState('');
   const [password, setpassword] = useState('');
   const [loading, setloading] = useState('LOG IN');
 
   const handlePress = () => {
-    if (loading == 'LOG IN') {
-      setloading('IN');
-    } else {
-      setloading('LOG IN');
+    console.log('here');
+    if (Username === 'Kio' || password === 'Modupe') {
+      navigation.navigate('Homescreen');
+      Alert.alert('success', 'proceed to homepage');
+      return;
     }
   };
+
+  // const handlePress = () => {
+  //   if (loading == 'LOG IN') {
+  //     setloading('IN');
+  //   } else {
+  //     setloading('LOG IN');
+  //   }
+  // };
   return (
     <View style={styles.container}>
       <View
@@ -35,18 +44,25 @@ const LoginScreen = () => {
         <Text style={styles.text}> Full Name/Email </Text>
         <TextInput
           style={styles.input}
-          // onChangeText={onChangeText}
-          // value={text}
-          type={Username}
+          onChangeText={Username => {
+            const lowercasede = Username.toLowerCase();
+            setUsername(Username);
+            console.log('Username:', Username);
+          }}
+          value={Username}
+          // type={Username}
           placeholder="Name/Email"
         />
 
         <Text style={styles.text}> Password</Text>
         <TextInput
           style={styles.input}
-          // onChangeText={onChangeText}
-          // value={text}
-          type={password}
+          onChangeText={text => {
+            setpassword(text);
+            console.log('UserPasword:', text);
+          }}
+          value={password}
+          // type={password}
           placeholder="create a password"
         />
 

@@ -30,16 +30,22 @@ const App = () => {
             <Stack.Screen
               name="LoginScreen"
               component={LoginScreen}
-              // options={{headerShown: false}}
+              options={{headerShown: false}}
             />
             <Stack.Screen
               name="SignUpScreen"
               component={SignUpScreen}
-              // options={{headerShown: false}}
+              options={{headerShown: false}}
+            />
+
+            <Stack.Screen
+              name="Homescreen"
+              component={Homescreen}
+              options={{headerShown: false}}
             />
             {/* <View style={styles.container}> */}
             {/* <StatusBar /> */}
-            {/* <Homescreen /> */}
+
             {/* <Welcomescreen /> */}
             {/* <SignUpScreen /> */}
             {/* <LoginScreen /> */}

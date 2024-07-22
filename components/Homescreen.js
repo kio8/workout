@@ -22,8 +22,8 @@ const handpress = () => {
 };
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={{top: 30, flex: 1}}>
-      {/* <View
+    <SafeAreaView style={{flex: 1, backgroundColor: 'black'}}>
+      <View
         style={{
           marginBottom: 10,
           justifyContent: 'flex-start',
@@ -36,9 +36,15 @@ const HomeScreen = () => {
           email="mo@gmail.com"
           image={require('../assests/mo.jpeg')}
         />
-        <Text style={{fontWeight: 'bold', fontSize: 25}}> Store</Text>
-      </View> */}
-      <View style={{flex: 0.85, margin: 10, gap: 10, alignItems: 'center'}}>
+        {/* <Text style={{fontWeight: 'bold', fontSize: 25}}> Store</Text> */}
+      </View>
+      <View
+        style={{
+          flex: 0.85,
+          margin: 10,
+          gap: 10,
+          alignItems: 'center',
+        }}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <TouchableOpacity onPress={handpress}>
             <ImageBackground
